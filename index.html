@@ -34,13 +34,14 @@ title: Home
 
     <div class="section-title">
 
-        <h2><span>All Stories</span></h2>
+        <h2><span>Engineering</span></h2>
 
     </div>
 
     <div class="row listrecent">
 
-        {% for post in paginator.posts %}
+        {% assign engineering_posts = paginator.posts | where_exp: "post", "post.tags contains 'engineering'" %}
+        {% for post in engineering_posts %}
 
         {% include postbox.html %}
 
