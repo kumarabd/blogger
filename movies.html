@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Home
+title: Movies
+permalink: /movies/
 ---
 
 <!-- Posts Index
@@ -15,8 +16,8 @@ title: Home
 
     <div class="row listrecent">
 
-        {% assign engineering_posts = paginator.posts | where_exp: "post", "post.tags contains 'engineering'" %}
-        {% for post in engineering_posts %}
+        {% assign movies_posts = site.posts | where_exp: "post", "post.tags contains 'movies'" %}
+        {% for post in movies_posts %}
 
         {% include postbox.html %}
 
@@ -34,4 +35,3 @@ title: Home
     {% include pagination.html %}
 </span>
 </div>
-
