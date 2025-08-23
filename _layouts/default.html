@@ -187,15 +187,36 @@ ga('send', 'pageview');
 <script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script> 
 
 <!-- Mermaid Support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
 <script>
-    mermaid.initialize({
-        startOnLoad: true,
-        theme: 'default',
-        flowchart: {
-            useMaxWidth: true,
-            htmlLabels: true
-        }
+    document.addEventListener('DOMContentLoaded', function() {
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true
+            },
+            securityLevel: 'loose'
+        });
+        
+        // Wait a bit for the page to fully load
+        setTimeout(function() {
+            // Find all mermaid code blocks and convert them
+            const mermaidBlocks = document.querySelectorAll('pre code.language-mermaid');
+            console.log('Found mermaid blocks:', mermaidBlocks.length);
+            
+            mermaidBlocks.forEach(function(block) {
+                const diagram = block.textContent;
+                const wrapper = document.createElement('div');
+                wrapper.className = 'mermaid';
+                wrapper.textContent = diagram;
+                block.parentNode.replaceWith(wrapper);
+            });
+            
+            // Initialize mermaid after converting blocks
+            mermaid.init(undefined, '.mermaid');
+        }, 100);
     });
 </script>
 
