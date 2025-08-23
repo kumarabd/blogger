@@ -8,6 +8,21 @@
 	display:inline;
 }
 
+/* Mermaid Diagram Styling */
+.mermaid {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.mermaid svg {
+    max-width: 100%;
+    height: auto;
+}
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
 	"syntax",
