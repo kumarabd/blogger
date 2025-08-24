@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Red Riding Hood"
-author: sal
+author: abishek
 categories: [ Jekyll, tutorial ]
 tags: [movies, fairy-tale, classic]
 image: assets/images/1.jpg

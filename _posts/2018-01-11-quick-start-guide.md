@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Let's test spoilers"
-author: sal
+author: abishek
 categories: [ Jekyll, tutorial ]
 tags: [engineering, jekyll, tutorial]
 image: assets/images/12.jpg

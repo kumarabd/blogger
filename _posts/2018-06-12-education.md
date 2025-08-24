@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Education must also train one for quick, resolute and effective thinking."
-author: john
+author: abishek
 categories: [ Jekyll, tutorial ]
 tags: [engineering, education, markdown]
 image: assets/images/3.jpg

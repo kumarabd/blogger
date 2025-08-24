@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Inception Movie"
-author: john
+author: abishek
 categories: [ Jekyll, tutorial ]
 tags: [movies, inception, review]
 image: assets/images/11.jpg
